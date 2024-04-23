@@ -166,7 +166,12 @@ for (let i = 0; i < predictions.length; i += 1) {
     ellipse(keypoint[0], keypoint[1], 10, 10);
     }
     tickCounter++;
-    
+    if (tickCounter > (speed/5)){
+        temp = String(compare(myList))
+        textSize(30)
+        text(temp + ".", 30, 30)
+        textSize(12)
+    }
     if (tickCounter > speed){
         tickCounter = 0;
         if (predictions.length > 0){
